@@ -6,6 +6,6 @@ SELECT Student.StudentId ,Student.FirstName, Student.LastName, Course.CourseName
 FROM Enrolment 
 LEFT JOIN Student ON Enrolment.Studentid = Student.Studentid
 LEFT JOIN Course ON Enrolment.Courseid = Course.Courseid
-GROUP BY Student.FirstName
+
 
 
