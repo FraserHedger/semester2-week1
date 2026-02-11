@@ -2,7 +2,7 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName,
 SELECT s.StudentId, s.FirstName, s.LastName, 
-       COALESCE(SUM(CASE WHEN e.Grade >= 40 THEN c.Credits ELSE 0 END), 0) AS TotalCredits
+COALESCE(SUM(CASE WHEN e.Grade >= 40 THEN c.Credits END), 0) AS TotalCredits
 FROM Student s
 LEFT JOIN Enrolment e ON s.StudentId = e.StudentId
 LEFT JOIN Course c ON e.CourseId = c.CourseId
