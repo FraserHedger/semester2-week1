@@ -2,7 +2,7 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName,
 SELECT s.StudentId, s.FirstName, s.LastName, 
-SUM(c.credits) AS TotalCredits
+SUM(c.credits) AS TotalCreditsPassed
 FROM Student s
 LEFT JOIN Enrolment e ON s.StudentId = e.StudentId
 LEFT JOIN Course c ON e.CourseId = c.CourseId
