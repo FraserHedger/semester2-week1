@@ -6,5 +6,6 @@ SUM(c.credits) AS TotalCreditsPassed
 FROM Student s
 LEFT JOIN Enrolment e ON s.StudentId = e.StudentId
 LEFT JOIN Course c ON e.CourseId = c.CourseId
+WHERE e.Grade >= 40;
 GROUP BY s.StudentId
-HAVING e.Grade >= 40;
+
